@@ -10,6 +10,14 @@ PyCharm** 2017.2.3
 
 # 三方库
 
+lxml
+
 ```bash
 pip install lxml
+```
+
+BeautifulSoup
+
+```bash
+pip install bs4
 ```
