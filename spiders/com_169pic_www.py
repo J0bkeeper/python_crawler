@@ -155,7 +155,4 @@ def main():
         getAllPageUrl(html)
 
 if __name__=='__main__':
-    # print(folerpath)
     main()
-    # html =  gethtml("http://www.169pic.com/gaogensiwa/2016/0808/36632.html")
-    # print(html)
