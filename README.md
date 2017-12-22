@@ -10,6 +10,12 @@ PyCharm** 2017.2.3
 
 # 三方库
 
+requests
+
+```bash
+pip install requests
+```
+
 lxml
 
 ```bash
@@ -19,5 +25,5 @@ pip install lxml
 BeautifulSoup
 
 ```bash
-pip install bs4
+pip install beautifulsoup4
 ```
