@@ -74,6 +74,5 @@ def work():
     for each in subpageList:#爬取每个页面上的图片
         saveImgInPage(url + each)
 
-
 if __name__ == '__main__':
     work()
