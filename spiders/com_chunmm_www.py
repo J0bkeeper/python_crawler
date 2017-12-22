@@ -59,7 +59,6 @@ def saveImgInPage(url):
                     f.write(response)
                 print('**********目前已成功获取%d张图片!' % imgCount)
                 imgCount += 1
-
     else:
         print('**********当前页面获取失败!')
 
@@ -74,7 +73,7 @@ def work():
 
     for each in subpageList:#爬取每个页面上的图片
         saveImgInPage(url + each)
-    
+
 
 if __name__ == '__main__':
     work()
