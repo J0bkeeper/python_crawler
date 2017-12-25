@@ -27,3 +27,15 @@ BeautifulSoup
 ```bash
 pip install beautifulsoup4
 ```
+
+Scrapy
+
+```bash
+pip install scrapy
+```
+
+Selenium
+
+```bash
+pip install selenium
+```	
