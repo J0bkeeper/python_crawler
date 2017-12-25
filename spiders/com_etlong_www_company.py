@@ -60,8 +60,11 @@ def get_company_url(urls):
                     detail.append('')
                 else:
                     detail.append(res[0])
-                with open('1215.csv','a')as f:
-                    f.write(str(detail) + '\n')
+                with open('1215.csv','a', encoding="utf-8")as f:
+                    print(detail)
+                    f.write(str(detail))
+                    # f.write(str(str(detail).encode()))
+                        # f.write(i)
 
 def main():
     html = get_hangye_html()
