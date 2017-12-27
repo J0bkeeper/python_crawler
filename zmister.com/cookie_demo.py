@@ -13,8 +13,8 @@ import json
 CONFIGFILE="cookie.conf"
 config=configparser.RawConfigParser()
 config.read(CONFIGFILE)
-cookie = config.get("ishareread", "cookie.conf")
-# print(cookie.conf)
+cookie = config.get("ishareread", "cookie")
+# print(cookie)
 
 # url = "http://www.ishareread.com/"
 #
