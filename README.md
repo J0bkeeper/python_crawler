@@ -53,6 +53,13 @@ pytesseract
 pip install pytesseract
 ```
 
+MySQL
+pymysql
+
+```bash
+pip install pymysql
+```
+
 MongoDB
 pymongo
 
