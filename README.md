@@ -38,4 +38,24 @@ Selenium
 
 ```bash
 pip install selenium
-```	
+```
+
+Pillow
+
+```bash
+pip install pillow
+```
+
+Tesseract
+pytesseract
+
+```bash
+pip install pytesseract
+```
+
+MongoDB
+pymongo
+
+```bash
+pip install pymongo
+```
