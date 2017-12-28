@@ -91,3 +91,9 @@ Natural Language Toolkit
 ```bash
 pip install nltk
 ```
+
+TensorFlow
+
+```bash
+pip install tensorflow 
+```
