@@ -11,10 +11,9 @@ PyCharm** 2017.2.3
 # 大神们
 [反爬虫](anti_spider/README.md)
 
-代理
-[Nyloner/ProxyPool](https://github.com/Nyloner/ProxyPool)
-
 [爬虫](web_crawler/README.md)
+
+[Scrapy](scrapy_crawler/README.md)
 
 # 三方库
 
