@@ -11,13 +11,28 @@ import nltk
 
 pages = []
 
+url = "http://www.chinadaily.com.cn/"
+
+headers = {
+    'Host': "www.chinadaily.com.cn",
+    'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:57.0) Gecko/20100101 Firefox/57.0",
+    'Accept': "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    'Accept-Language': "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+    'Cookie': "7NSx_98ef_saltkey=nTW2xv3v; 7NSx_98ef_lastvisit=1514428001; 7NSx_98ef_lastact=1514431601%09api.php%09chinadaily; wdcid=09bee0c8922ad252; wdlast=1514431686; wdses=28c084cf4550c862; UM_distinctid=1609b29a4da9-0ad3d679a5221c8-49566f-1aeaa0-1609b29a4db196; CNZZDATA3089622=cnzz_eid%3D489926846-1514427139-%26ntime%3D1514427139",
+    'Connection': "keep-alive",
+    'Upgrade-Insecure-Requests': "1",
+    'Pragma': "no-cache",
+    'Cache-Control': "no-cache",
+    }
+
+
 #1.爬取ChinaDaily全站网页URL
 def get_all_link(url):
     try:
         # 分割网址
         host = url.split('/')
         # print(host[2])
-        response = requests.get(url).text
+        response = requests.get(url, headers=headers).text
         soup = BeautifulSoup(response,'lxml')
         for link in soup.find_all('a'):
             # 判断网页中提取的URl形式
@@ -42,7 +57,7 @@ def get_all_link(url):
 #2.请求爬取的URL并解析网页单词
 #解析网页单词并写入文本文件
 def resolve_html(url):
-    response = requests.get(url).content
+    response = requests.get(url, headers=headers).content
     soup = BeautifulSoup(response,'lxml')
     # 替换换行字符
     text = str(soup).replace('\n','').replace('\r','')
