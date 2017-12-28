@@ -15,8 +15,8 @@ def get_all_link(url):
         # 分割网址
         host = url.split('/')
         # print(host[2])
-        wbdata = requests.get(url).text
-        soup = BeautifulSoup(wbdata,'lxml')
+        response = requests.get(url).text
+        soup = BeautifulSoup(response,'lxml')
         for link in soup.find_all('a'):
             # 判断网页中提取的URl形式
             if link.get('href') not in pages and link.get('href') is not None:
@@ -40,8 +40,8 @@ def get_all_link(url):
 #2.请求爬取的URL并解析网页单词
 #解析网页单词并写入文本文件
 def resolve_html(url):
-    wbdata = requests.get(url).content
-    soup = BeautifulSoup(wbdata,'lxml')
+    response = requests.get(url).content
+    soup = BeautifulSoup(response,'lxml')
     # 替换换行字符
     text = str(soup).replace('\n','').replace('\r','')
     # 替换<script>标签
