@@ -7,6 +7,7 @@ __time__ = '2017.12.28 11:14'
 import requests
 from bs4 import BeautifulSoup
 import nltk
+from multiprocessing import Pool
 
 
 pages = set()
@@ -40,14 +41,18 @@ def get_all_link(url):
                 if link.get('href').startswith('http'):
                     if link.get('href').split('/')[2] == host[2]:
                         newpage = link.get('href')
-                        # print(newpage)
+                        print(newpage)
                         pages.add(newpage)
+                        with open("urllist", 'a', encoding="utf-8") as f:
+                            f.write(newpage)
                         get_all_link(newpage)
                 elif link.get('href').startswith('/'):
                     newpage = link.get('href')
+                    # with open("urllist", 'a', encoding="utf-8") as f:
+                    #     f.write(newpage)
                     pages.add(newpage)
                     newpage_url = 'http://'+host[2]+newpage
-                    # print(newpage_url)
+                    print(newpage_url)
                     get_all_link(newpage_url)
         print('url数量：'+str(len(pages)))
     except BaseException as e:
@@ -106,3 +111,5 @@ if __name__ == '__main__':
     # pool.join()
     # print('运行完成')
     get_all_link(url)
+    for p in pages:
+        resolve_html(p)
