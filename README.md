@@ -97,3 +97,11 @@ TensorFlow
 ```bash
 pip install tensorflow 
 ```
+
+Face Recognition
+
+```bash
+brew install cmake boost
+
+pip install face_recognition
+```
