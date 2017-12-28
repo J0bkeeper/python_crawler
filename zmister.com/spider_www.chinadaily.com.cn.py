@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 import nltk
 
 
+pages = []
+
 #1.爬取ChinaDaily全站网页URL
 def get_all_link(url):
     try:
@@ -24,11 +26,11 @@ def get_all_link(url):
                     if link.get('href').split('/')[2] == host[2]:
                         newpage = link.get('href')
                         # print(newpage)
-                        pages.add(newpage)
+                        pages.append(newpage)
                         get_all_link(newpage)
                 elif link.get('href').startswith('/'):
                     newpage = link.get('href')
-                    pages.add(newpage)
+                    pages.append(newpage)
                     newpage_url = 'http://'+host[2]+newpage
                     # print(newpage_url)
                     get_all_link(newpage_url)
