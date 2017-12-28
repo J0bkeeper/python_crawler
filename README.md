@@ -66,3 +66,15 @@ pymongo
 ```bash
 pip install pymongo
 ```
+
+pandas
+
+```bash
+pip install pandas
+```
+
+Matplotlib
+
+```bash
+pip install matplotlib
+```
