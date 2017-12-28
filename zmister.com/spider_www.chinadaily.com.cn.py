@@ -55,7 +55,7 @@ def resolve_html(url):
     text = [i for i in text if len(i) > 1 and i != 'chinadaily']
     text = ' '.join(text)
     print(text)
-    with open("j:\python\words.txt",'a+',encoding='utf-8') as file:
+    with open("words.txt",'a+',encoding='utf-8') as file:
       file.write(text+' ')
       print("写入成功")
 
@@ -63,7 +63,7 @@ def resolve_html(url):
 #3.对单词文本文件进行词频处理
 #对单词文本文件进行词频处理
 def resolve_words():
-    corpath = 'J:\\python\\words'
+    corpath = 'words'
     wordlist = PlaintextCorpusReader(corpath,'.*')
     allwords = nltk.Text(wordlist.words('words.txt'))
     print("单词总数",len(allwords))
@@ -77,7 +77,7 @@ def resolve_words():
     print(fdist.most_common(3000))
     for item in fdist.most_common(3000):
         print(item,item[0])
-        with open('J:\\python\\words3000.txt','a+',encoding='utf-8') as file:
+        with open('words3000.txt','a+',encoding='utf-8') as file:
             file.write(item[0]+'\r')
     print("写入完成")
 
