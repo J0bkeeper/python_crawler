@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import nltk
 
 
-pages = []
+pages = set()
 
 url = "http://www.chinadaily.com.cn/"
 
@@ -41,11 +41,11 @@ def get_all_link(url):
                     if link.get('href').split('/')[2] == host[2]:
                         newpage = link.get('href')
                         # print(newpage)
-                        pages.append(newpage)
+                        pages.add(newpage)
                         get_all_link(newpage)
                 elif link.get('href').startswith('/'):
                     newpage = link.get('href')
-                    pages.append(newpage)
+                    pages.add(newpage)
                     newpage_url = 'http://'+host[2]+newpage
                     # print(newpage_url)
                     get_all_link(newpage_url)
@@ -100,8 +100,9 @@ def resolve_words():
 
 
 if __name__ == '__main__':
-    pool = Pool(processes=2)
-    pool.map_async(resolve_html,urllist)
-    pool.close()
-    pool.join()
-    print('运行完成')
+    # pool = Pool(processes=2)
+    # pool.map_async(resolve_html,urllist)
+    # pool.close()
+    # pool.join()
+    # print('运行完成')
+    get_all_link(url)
