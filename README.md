@@ -84,3 +84,10 @@ scikit-learn
 ```bash
 pip install scikit-learn
 ```
+
+nltk
+Natural Language Toolkit
+
+```bash
+pip install nltk
+```
