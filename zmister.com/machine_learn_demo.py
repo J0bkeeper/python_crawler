@@ -45,10 +45,12 @@ def scrap_toutiao(uid):
             news.insert_one(result)
 
 
-with open('今日头条ID.txt', mode='r') as text:
-    oneid = text.readlines()
-    for i in oneid:
-        print(i, end='')
-        scrap_toutiao(uid=i)
+# with open('今日头条ID.txt', mode='r') as text:
+#     oneid = text.readlines()
+#     for i in oneid:
+#         print(i, end='')
+#         scrap_toutiao(uid=i)
+
+scrap_toutiao(66315089522)
 
 conn.close()
