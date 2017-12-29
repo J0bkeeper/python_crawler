@@ -112,3 +112,11 @@ brew install cmake boost
 
 pip install face_recognition
 ```
+
+Excel
+xlrd
+xlwt
+
+```bash
+pip install xlrd xlwt
+```
