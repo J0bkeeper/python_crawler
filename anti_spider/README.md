@@ -8,4 +8,6 @@
 
 [Python3WebSpider/ProxySettings](https://github.com/Python3WebSpider/ProxySettings)
 
-[Python3WebSpider/CookiesPool](https://github.com/Python3WebSpider/CookiesPool)
+[Germey/AutoProxy](https://github.com/Germey/AutoProxy)
+
+[Python3WebSpider/CookiesPool](lshttps://github.com/Python3WebSpider/CookiesPool)
