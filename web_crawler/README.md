@@ -6,3 +6,5 @@
 [Ehco1996/Python-crawler](https://github.com/Ehco1996/Python-crawler)
 
 [wzyonggege/Mzitu-Crawler](https://github.com/wzyonggege/Mzitu-Crawler)
+
+[facert/awesome-spider](https://github.com/facert/awesome-spider)
